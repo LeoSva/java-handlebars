@@ -1,0 +1,15 @@
+[
+{{#each pedidos}} 
+{
+ 	"cod-pedido": {{codigo}},
+	"produtos": [
+ 	{{#each itens}}
+		{
+		  "cod": {{codigo}},
+		  "desc": "{{descricao}}"
+		}{{#unless @last}},{{/unless}}
+ 	{{/each}}
+	]
+}{{#unless @last}},{{/unless}}
+{{/each}}
+]
